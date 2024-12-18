@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #24272c;
+}
+
+header{
+    background-color: #161b23;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    /* padding: 40px 0; */
+}
+
+header h1{
+    margin: 10px;
+    color:#d6dde8;
+    font-size: 50px;
+}
+
+header .buttonContainer{
+    margin: 10px;
+}
+
+.buttonContainer .buttonConfig{
+    margin: 10px;
+    background-color: #4b515c;
+    color: #d6dde8;
+    height: 40px;
+    padding: 5px;
+    border: 2px solid #124ca9;
+}
+
+.mainConfig {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #d6dde8;
+    width: 500px;
+}
+
+/* #cardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 500px;
+    height: 500px;
+} */
