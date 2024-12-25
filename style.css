@@ -7,16 +7,20 @@
 body{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-color: #24272c;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #161b23;
+    font-family: Arial, sans-serif;
+    color: #d6dde8;
 }
 
 header{
     background-color: #161b23;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #d62ed3;
+    width: 100%;
 }
 
 header h1{
@@ -26,43 +30,76 @@ header h1{
 }
 
 header .buttonContainer{
-    margin: 10px;
-}
-
-.buttonContainer .buttonConfig{
-    margin: 10px;
-    background-color: #4b515c;
-    color: #d6dde8;
-    height: 40px;
-    padding: 5px;
-    border: 2px solid #124ca9;
-}
-
-.divContainer{
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    gap: 10px;
 }
 
-.mainConfig {
+.buttonConfig{
+    background-color: #441b48;
+    color: #d6dde8;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttonConfig:hover{
+    background-color: #91127e;
+}
+
+main{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
-    /* flex-grow: 1; */
+    flex-grow: 1;
+    width: 100%;
 }
 
-#cardContainer{
+#card-container{
     display: flex;
     flex-direction: column;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid white;
-    width: 500px;
-    height: 500px;
+    background-color: #24272c;
+    max-width: 500px;
+    width: 90%;
+    border: 2px solid #58595D;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
 }
 
-.mainConfig .cardContainer .cardItem{
-    height: 50px;
+#card-container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
+
+.text-meme{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 4px;
+    z-index: 2;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #161b23;
+}
+
+.text-top, .text-bottom{
+    align-self: flex-start;
+    
+}
+
+
