@@ -57,7 +57,7 @@ $rangeOpacity.addEventListener("input", () => {
 });
 
 $rangeContrast.addEventListener("input", () => {
-    
+    $imgMeme.style.filter = `contrast(${$rangeContrast.value})`;
 })
 
 
