@@ -109,4 +109,26 @@ $rangeNegative.addEventListener("input", () => {
 
 $inputTextTop.addEventListener("input", () => {
     $divCardTextTop.innerText = $inputTextTop.value
+});
+
+// no funciona para destildar 
+$inputNoTextTop.addEventListener("change", () => {
+   if($inputNoTextTop.checked){
+    $divCardTextTop.style.display = "none";
+   } else{
+    $divCardTextTop.style.display = "block";
+   }
+}) 
+
+$inputTextBottom.addEventListener("input", () => {
+    $divCardTextBottom.innerText = $inputTextBottom.value
 })
+
+// no funciona al destildar 
+$inputNoTextBottom.addEventListener("change", () => {
+    if($inputNoTextBottom.checked){
+     $divCardTextBottom.style.display = "none";
+    } else{
+     $divCardTextBottom.style.display = "block";
+    }
+ }) 
