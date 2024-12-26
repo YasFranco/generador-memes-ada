@@ -197,10 +197,12 @@ $buttonDarkContour.addEventListener("click", () => {
 });
 
 $inputSpacing.addEventListener("input", () => {
-    
+    $divCardTextTop.style.letterSpacing = `${$inputSpacing.value}px`
+    $divCardTextBottom.style.letterSpacing = `${$inputSpacing.value}px`
 });
 
 
 $inputLineSpacing.addEventListener("input", () => {
-    
+    $divCardTextTop.style.lineHeight = `${$inputLineSpacing.value}`
+    $divCardTextBottom.style.lineHeight = `${$inputLineSpacing.value}`
 });
