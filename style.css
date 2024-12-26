@@ -104,7 +104,7 @@ main{
 
 aside{
     position: fixed;
-    width: 300px;
+    width: 310px;
     height: 100vh;
     background-color: #21242b;
     padding: 20px;
@@ -120,7 +120,8 @@ aside h2{
     color: #91127e
 }
 
-#img-container{
+#img-container,
+#txt-container{
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -135,10 +136,13 @@ aside h2{
 input[type="text"],
 input[type="color"],
 input[type="range"],
+input[type="number"],
 select{
     padding: 5px;
     border: 2px solid #d62ed3;
     border-radius: 5px;
     color: #441b48;
     font-size: 15px;
+
 }
+
