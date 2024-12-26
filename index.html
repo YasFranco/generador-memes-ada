@@ -21,8 +21,9 @@
     <main>
         <div id="cardContainer">
             <div id="imgMeme"></div>
-            <div class="text-meme text-top">Texto Superior</div>
-            <div class="text-meme text-bottom">Texto inferior</div>
+            <div id="cardTextTop" class="text-meme text-top">
+            </div>
+            <div id="cardTextBottom" class="text-meme text-bottom"></div>
         </div>
         <button class="buttonConfig">Descargar meme</button>
     </main>
@@ -118,9 +119,9 @@
                 </select>
                 <div>
                     <input type="number" id="fontNumber">
-                    <button class="buttonConfig">Izq</button>
-                    <button class="buttonConfig">Centro</button>
-                    <button class="buttonConfig">Derecha</button>
+                    <button id="textLeft" class="buttonConfig">Izq</button>
+                    <button id="textCenter" class="buttonConfig">Centro</button>
+                    <button id="textRight" class="buttonConfig">Derecha</button>
                 </div>
             </div>
             <div class="form-items">
@@ -138,9 +139,9 @@
             <div class="form-items">
                 <label for="contour">Contorno</label>
                 <div>
-                    <button class="buttonConfig">No</button>
-                    <button class="buttonConfig">Claro</button>
-                    <button class="buttonConfig">Oscuro</button>
+                    <button id="noContour" class="buttonConfig">No</button>
+                    <button id="lightContour" class="buttonConfig">Claro</button>
+                    <button id="darkContour" class="buttonConfig">Oscuro</button>
                 </div>
             </div>
             <div class="form-items">

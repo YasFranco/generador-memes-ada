@@ -4,6 +4,7 @@ const $buttonImage = $("#buttonImage");
 const $buttonText = $("#buttonText");
 const $asideImg = $("#taskbarImg");
 const $asideTxt = $("#taskbarTxt");
+// ----- BARRA DE CONFIG DE IMAGEN -------
 const $imgMeme = $("#imgMeme"); //este es el div que contiene a la imagen 
 const $inputUrlImg = $("#imgUrl");
 const $inputImgBg = $("#imgBgcolor");
@@ -16,6 +17,26 @@ const $rangeSepia = $("#imgSepia");
 const $rangeHue = $("#imgHueRotation");
 const $rangeSaturation = $("#imgSaturation");
 const $rangeNegative = $("#imgNegatives");
+// ----- BARRA DE CONFIG TEXTO --------
+const $inputTextTop = $("#textTop");
+const $inputNoTextTop = $("#noTextTop");
+const $inputTextBottom = $("#textBottom");
+const $inputNoTextBottom = $("#noTextBottom");
+const $selectFont = $("#selectFont");
+const $inputFontNumber = $("#fontNumber");
+const $buttonLeft = $("#textLeft");
+const $buttonCenter = $("#textCenter");
+const $buttonRight = $("#textRight");
+const $inputColorText = $("#colorText");
+const $inputColorBgText = $("#colorBg");
+const $inputNoBg = $("#noBg");
+const $buttonNoContour = $("#noContour");
+const $buttonLightContour = $("#lightContour");
+const $buttonDarkContour = $("#darkContour");
+const $inputSpacing = $("#numberSpacing");
+const $inputLineSpacing = $("#numberSpacingLine");
+const $divCardTextTop = $("#cardTextTop"); // este es el div que contiene al texto superior
+const $divCardTextBottom = $("#cardTextBottom"); // este es el div que contiene al texto inferior 
 
 
 // funcion para los botones "imagen" y "texto"
@@ -84,4 +105,8 @@ $rangeNegative.addEventListener("input", () => {
     $imgMeme.style.filter = `invert(${$rangeNegative.value})`;
 });
 
+// --------------------------------
 
+$inputTextTop.addEventListener("input", () => {
+    $divCardTextTop.innerText = $inputTextTop.value
+})
