@@ -102,4 +102,43 @@ main{
     
 }
 
+aside{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background-color: #21242b;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    z-index: 10;
+}
 
+aside h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #91127e
+}
+
+#img-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input[type="text"],
+input[type="color"],
+input[type="range"],
+select{
+    padding: 5px;
+    border: 2px solid #d62ed3;
+    border-radius: 5px;
+    color: #441b48;
+    font-size: 15px;
+}
