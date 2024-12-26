@@ -57,9 +57,31 @@ $rangeOpacity.addEventListener("input", () => {
 });
 
 $rangeContrast.addEventListener("input", () => {
-    $imgMeme.style.filter = `contrast(${$rangeContrast.value})`;
-})
+    $imgMeme.style.filter = `contrast(${$rangeContrast.value}%)`;
+});
 
+$rangeBlur.addEventListener("input", () => {
+    $imgMeme.style.filter = `blur(${$rangeBlur.value}px)`;
+});
 
+$rangeGrayScale.addEventListener("input", () => {
+    $imgMeme.style.filter = `grayscale(${$rangeGrayScale.value}%)`;
+});
+
+$rangeSepia.addEventListener("input", () => {
+    $imgMeme.style.filter = `sepia(${$rangeSepia.value}%)`;
+});
+
+$rangeHue.addEventListener("input", () => {
+    $imgMeme.style.filter = `hue-rotate(${$rangeHue.value}deg)`;
+});
+
+$rangeSaturation.addEventListener("input", () => {
+    $imgMeme.style.filter = `saturate(${$rangeSaturation.value}%)`;
+});
+
+$rangeNegative.addEventListener("input", () => {
+    $imgMeme.style.filter = `invert(${$rangeNegative.value})`;
+});
 
 
