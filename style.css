@@ -11,7 +11,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background-color: #161b23;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", serif;
     color: #d6dde8;
 }
 
@@ -50,6 +50,10 @@ header .buttonContainer{
 .buttonConfig:hover{
     background-color: #91127e;
 }
+
+/* .fa-light{
+    color: #d6dde8;
+} */
 
 main{
     display: flex;

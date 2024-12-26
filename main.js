@@ -143,3 +143,30 @@ $inputFontNumber.addEventListener("input", () => {
     $divCardTextBottom.style.fontSize = `${$inputFontNumber.value}px`;
 })
 
+$buttonLeft.addEventListener("click", () => {
+    // console.log($buttonLeft.value)
+    $divCardTextTop.style.textAlign = $buttonLeft.value
+    $divCardTextBottom.style.textAlign = $buttonLeft.value
+})
+
+$buttonCenter.addEventListener("click", () => {
+    // console.log($buttonCenter.value)
+    $divCardTextTop.style.textAlign = $buttonCenter.value
+    $divCardTextBottom.style.textAlign = $buttonCenter.value
+
+})
+
+$buttonRight.addEventListener("click", () => {
+    // console.log($buttonRight.value)
+    $divCardTextTop.style.textAlign = $buttonRight.value
+    $divCardTextBottom.style.textAlign = $buttonRight.value
+
+})
+
+$inputColorText.addEventListener("input", () => {
+
+})
+
+$inputColorBgText.addEventListener("input", () => {
+
+})
