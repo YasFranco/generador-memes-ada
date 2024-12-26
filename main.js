@@ -180,3 +180,27 @@ $inputNoBg.addEventListener("change", () => {
     $divCardTextBottom.style.backgroundColor = bgColor;
 });
 
+$buttonNoContour.addEventListener("click", () => {
+    $divCardTextTop.style.textShadow = "none";
+    $divCardTextBottom.style.textShadow = "none";
+});
+
+$buttonLightContour.addEventListener("click", () => {
+    $divCardTextTop.style.textShadow = "2px 2px 4px white"
+    $divCardTextBottom.style.textShadow = "2px 2px 4px white"
+    
+});
+
+$buttonDarkContour.addEventListener("click", () => {
+    $divCardTextTop.style.textShadow = "2px 2px 4px black"
+    $divCardTextBottom.style.textShadow = "2px 2px 4px black"
+});
+
+$inputSpacing.addEventListener("input", () => {
+    
+});
+
+
+$inputLineSpacing.addEventListener("input", () => {
+    
+});
