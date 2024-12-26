@@ -4,6 +4,11 @@ const $buttonImage = $("#buttonImage");
 const $buttonText = $("#buttonText");
 const $asideImg = $("#taskbarImg");
 const $asideTxt = $("#taskbarTxt");
+const $imgMeme = $("#imgMeme");
+const $inputUrlImg = $("#imgUrl");
+const $inputImgBg = $("#imgBgcolor");
+
+
 
 // funcion para los botones "imagen" y "texto"
 const buttonsAside = (showAside, hideAside) => {
@@ -16,7 +21,6 @@ const buttonsAside = (showAside, hideAside) => {
 $buttonImage.addEventListener("click", () => {
     buttonsAside($asideImg, $asideTxt);
 });
-
 $buttonText.addEventListener("click", () => {
     buttonsAside($asideTxt, $asideImg);
 })
@@ -24,6 +28,19 @@ $buttonText.addEventListener("click", () => {
 // se muestra por defecto primero la barra de imagen y oculta la de texto
 $asideImg.style.display = 'block';
 $asideTxt.style.display = 'none';
+
+// barra imagen
+$inputUrlImg.addEventListener("input", () => {
+    $imgMeme.src = `${$inputUrlImg.value}`
+})
+
+// ver evento de fondo 
+$inputImgBg.addEventListener("input", () =>{
+    $imgMeme.backgroundColor = `${$inputImgBg.value}` 
+})
+
+
+
 
 
 
