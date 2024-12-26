@@ -172,3 +172,11 @@ $inputColorBgText.addEventListener("input", () => {
     $divCardTextTop.style.backgroundColor = $inputColorBgText.value
     $divCardTextBottom.style.backgroundColor = $inputColorBgText.value
 })
+
+// no se puede destildar 
+$inputNoBg.addEventListener("change", () => {
+    const bgColor = $inputNoBg.checked ? "transparent" : $inputColorBgText.value;
+    $divCardTextTop.style.backgroundColor = bgColor;
+    $divCardTextBottom.style.backgroundColor = bgColor;
+});
+
