@@ -164,9 +164,11 @@ $buttonRight.addEventListener("click", () => {
 })
 
 $inputColorText.addEventListener("input", () => {
-
+    $divCardTextTop.style.color = $inputColorText.value
+    $divCardTextBottom.style.color = $inputColorText.value
 })
 
 $inputColorBgText.addEventListener("input", () => {
-
+    $divCardTextTop.style.backgroundColor = $inputColorBgText.value
+    $divCardTextBottom.style.backgroundColor = $inputColorBgText.value
 })
