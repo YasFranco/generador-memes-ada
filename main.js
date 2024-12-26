@@ -111,8 +111,8 @@ $inputTextTop.addEventListener("input", () => {
     $divCardTextTop.innerText = $inputTextTop.value
 });
 
-// no funciona para destildar 
-$inputNoTextTop.addEventListener("change", () => {
+// no funciona para destildar, cuando lo saco el de abajo se va arriba
+$inputNoTextTop.addEventListener("input", () => {
    if($inputNoTextTop.checked){
     $divCardTextTop.style.display = "none";
    } else{
@@ -125,10 +125,21 @@ $inputTextBottom.addEventListener("input", () => {
 })
 
 // no funciona al destildar 
-$inputNoTextBottom.addEventListener("change", () => {
+$inputNoTextBottom.addEventListener("input", () => {
     if($inputNoTextBottom.checked){
      $divCardTextBottom.style.display = "none";
     } else{
      $divCardTextBottom.style.display = "block";
     }
  }) 
+
+$selectFont.addEventListener("change", () => {
+    $divCardTextTop.style.fontFamily = $selectFont.value;
+    $divCardTextBottom.style.fontFamily = $selectFont.value;
+})
+
+$inputFontNumber.addEventListener("input", () => {
+    $divCardTextTop.style.fontSize = `${$inputFontNumber.value}px`;
+    $divCardTextBottom.style.fontSize = `${$inputFontNumber.value}px`;
+})
+

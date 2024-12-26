@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Rubik+Vinyl&display=swap"
+        rel="stylesheet">
     <title>Generador de memes</title>
 </head>
 
@@ -37,14 +42,14 @@
                 <label for="img-bg">Fondo</label>
                 <div>
                     <input type="color" id="imgBgcolor">
-                <select id="selectMode">
-                    <option >Normal</option>
-                    <option >Multiplicar</option>
-                    <option>Pantalla</option>
-                    <option >Superponer</option>
-                    <option >Oscurecer</option>
-                    <option>Aclarar</option>
-                </select>
+                    <select id="selectMode">
+                        <option>Normal</option>
+                        <option>Multiplicar</option>
+                        <option>Pantalla</option>
+                        <option>Superponer</option>
+                        <option>Oscurecer</option>
+                        <option>Aclarar</option>
+                    </select>
                 </div>
             </div>
             <div class="form-items">
@@ -111,10 +116,10 @@
             <div class="form-items">
                 <label for="font">Fuente</label>
                 <select id="selectFont">
-                    <option >fuente 1</option>
-                    <option >fuente 2</option>
-                    <option >fuente 3</option>
-                    <option >fuente 4</option>
+                    <option value="Open Sans">Open Sans</option>
+                    <option value="Oswald">Oswald</option>
+                    <option value="Rubik Vinyl">Rubik Vinyl</option>
+                    <option value="Dancing Script">Dancing Script</option>
                 </select>
                 <div>
                     <input type="number" id="fontNumber">
