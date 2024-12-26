@@ -12,38 +12,38 @@
     <header>
         <h1>Generador de memes</h1>
         <div class="buttonContainer">
-            <button class="buttonConfig">Imagen</button>
-            <button class="buttonConfig">Texto</button>
+            <button id="buttonImage" class="buttonConfig">Imagen</button>
+            <button id="buttonText" class="buttonConfig">Texto</button>
             <button class="buttonConfig">Modo Oscuro</button>
         </div>
     </header>
 
     <main>
-        <div id="card-container">
-            <img id="img-meme" src="">
+        <div id="cardContainer">
+            <img id="imgMeme" src="">
             <div class="text-meme text-top">Texto Superior</div>
             <div class="text-meme text-bottom">Texto inferior</div>
         </div>
         <button class="buttonConfig">Descargar meme</button>
     </main>
-    <aside>
+    <aside id="taskbarImg">
         <h2>IMAGEN</h2>
-        <section id="img-container">
+        <section id="imgContainer">
             <div class="form-items">
                 <label for="img-url">URL de la imagen</label>
-                <input type="text" id="img-url">
+                <input type="text" id="imgUrl">
             </div>
             <div class="form-items">
                 <label for="img-bg">Fondo</label>
                 <div>
-                    <input type="color" id="img-bgcolor">
-                <select id="select-mode">
-                    <option value="normal">Normal</option>
-                    <option value="multiply">Multiplicar</option>
-                    <option value="screen">Pantalla</option>
-                    <option value="overlay">Superponer</option>
-                    <option value="darken">Oscurecer</option>
-                    <option value="lighten">Aclarar</option>
+                    <input type="color" id="imgBgcolor">
+                <select id="selectMode">
+                    <option >Normal</option>
+                    <option >Multiplicar</option>
+                    <option>Pantalla</option>
+                    <option >Superponer</option>
+                    <option >Oscurecer</option>
+                    <option>Aclarar</option>
                 </select>
                 </div>
             </div>
@@ -89,35 +89,35 @@
         </section>
     </aside>
 
-    <aside>
+    <aside id="taskbarTxt">
         <h2>TEXTO</h2>
-        <section id="txt-container">
+        <section id="txtContainer">
             <div class="form-items">
                 <label for="text-top">Texto Superior</label>
-                <input type="text" id="text-top">
+                <input type="text" id="textTop">
                 <div>
-                    <input type="radio" id="no-text-top">
+                    <input type="radio" id="noTextTop">
                     <label for="no-text-top">Sin texto superior</label>
                 </div>
             </div>
             <div class="form-items">
                 <label for="text-bottom">Texto Inferior</label>
-                <input type="text" id="text-bottom">
+                <input type="text" id="textBottom">
                 <div>
-                    <input type="radio" id="no-text-bottom">
+                    <input type="radio" id="noTextBottom">
                     <label for="no-text-bottom">Sin texto inferior</label>
                 </div>
             </div>
             <div class="form-items">
                 <label for="font">Fuente</label>
-                <select id="select-font">
-                    <option value="">fuente 1</option>
-                    <option value="">fuente 2</option>
-                    <option value="">fuente 3</option>
-                    <option value="">fuente 4</option>
+                <select id="selectFont">
+                    <option >fuente 1</option>
+                    <option >fuente 2</option>
+                    <option >fuente 3</option>
+                    <option >fuente 4</option>
                 </select>
                 <div>
-                    <input type="number" id="font-number">
+                    <input type="number" id="fontNumber">
                     <button class="buttonConfig">Izq</button>
                     <button class="buttonConfig">Centro</button>
                     <button class="buttonConfig">Derecha</button>
@@ -125,13 +125,13 @@
             </div>
             <div class="form-items">
                 <label for="color-text">Color</label>
-                <input type="color" id="color-text">
+                <input type="color" id="colorText">
             </div>
             <div class="form-items">
                 <label for="color-bg">Fondo</label>
-                <input type="color" id="color-bg">
+                <input type="color" id="colorBg">
                 <div>
-                    <input type="radio" id="no-bg">
+                    <input type="radio" id="noBg">
                     <label for="no-bg">Fondo transparente</label>
                 </div>
             </div>
@@ -145,11 +145,11 @@
             </div>
             <div class="form-items">
                 <label for="spacing">Espaciado</label>
-                <input type="number" id="number-spacing">
+                <input type="number" id="numberSpacing">
             </div>
             <div class="form-items">
                 <label for="spacing">Interlineado</label>
-                <input type="number" id="number-spacing-line">
+                <input type="number" id="numberSpacingLine">
             </div>
 
         </section>
