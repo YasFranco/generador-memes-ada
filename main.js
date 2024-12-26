@@ -4,10 +4,18 @@ const $buttonImage = $("#buttonImage");
 const $buttonText = $("#buttonText");
 const $asideImg = $("#taskbarImg");
 const $asideTxt = $("#taskbarTxt");
-const $imgMeme = $("#imgMeme");
+const $imgMeme = $("#imgMeme"); //este es el div que contiene a la imagen 
 const $inputUrlImg = $("#imgUrl");
 const $inputImgBg = $("#imgBgcolor");
-
+const $rangeBrightness = $("#imgBrightness");
+const $rangeOpacity = $("#imgOpacity");
+const $rangeContrast = $("#imgContrast");
+const $rangeBlur = $("#imgBlur");
+const $rangeGrayScale = $("#imgGrayScale");
+const $rangeSepia = $("#imgSepia");
+const $rangeHue = $("#imgHueRotation");
+const $rangeSaturation = $("#imgSaturation");
+const $rangeNegative = $("#imgNegatives");
 
 
 // funcion para los botones "imagen" y "texto"
@@ -40,8 +48,17 @@ $inputImgBg.addEventListener("input", () =>{
 })
 
 
+$rangeBrightness.addEventListener("input", () => {
+    $imgMeme.style.filter = `brightness(${$rangeBrightness.value})`
+});
 
+$rangeOpacity.addEventListener("input", () => {
+    $imgMeme.style.opacity = `${$rangeOpacity.value}`
+});
 
+$rangeContrast.addEventListener("input", () => {
+    
+})
 
 
 
