@@ -77,10 +77,6 @@ header .buttonContainer{
     background-color: #91127e;
 }
 
-/* .fa-light{
-    color: #d6dde8;
-} */
-
 main{
     display: flex;
     flex-direction: column;

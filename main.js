@@ -20,6 +20,7 @@ const $rangeHue = $("#imgHueRotation");
 const $rangeSaturation = $("#imgSaturation");
 const $rangeNegative = $("#imgNegatives");
 // ----- BARRA DE CONFIG TEXTO --------
+const $buttonCloseTxt = $("#closeFormTxt");
 const $inputTextTop = $("#textTop");
 const $inputNoTextTop = $("#noTextTop");
 const $inputTextBottom = $("#textBottom");
@@ -71,6 +72,10 @@ $buttonModeLight.addEventListener("click", () =>{
     document.body.classList.add("lightMode");
 
     buttonsChange($buttonModeDark,$buttonModeLight);
+})
+
+$buttonCloseTxt.addEventListener("click", () => {
+    $asideTxt.style.display = "none";
 })
 
 // se muestra por defecto primero la barra de imagen y oculta la de texto
@@ -133,9 +138,9 @@ $inputTextTop.addEventListener("input", () => {
 // no funciona para destildar, cuando lo saco el de abajo se va arriba
 $inputNoTextTop.addEventListener("input", () => {
    if($inputNoTextTop.checked){
-    $divCardTextTop.style.display = "none";
+    $divCardTextTop.style.visibility = "hidden";
    } else{
-    $divCardTextTop.style.display = "block";
+    $divCardTextTop.style.visibility = "visible";
    }
 }) 
 
