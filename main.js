@@ -1,11 +1,13 @@
 const $ = element => document.querySelector(element);
 
+const $card = $("#cardContainer")
 const $buttonImage = $("#buttonImage");
 const $buttonText = $("#buttonText");
 const $buttonModeDark = $("#buttonModeDark");
 const $buttonModeLight = $("#buttonModeLight");
 const $asideImg = $("#taskbarImg");
 const $asideTxt = $("#taskbarTxt");
+const $buttonDownload = $("#downloadImg")
 // ----- BARRA DE CONFIG DE IMAGEN -------
 const $imgMeme = $("#imgMeme"); //este es el div que contiene a la imagen 
 const $inputUrlImg = $("#imgUrl");
@@ -81,6 +83,14 @@ $buttonCloseTxt.addEventListener("click", () => {
 // se muestra por defecto primero la barra de imagen y oculta la de texto
 $asideImg.style.display = 'block';
 $asideTxt.style.display = 'none';
+
+$buttonDownload.addEventListener("click", () => {
+    domtoimage.toBlob($card).then((blob) => {
+        saveAs(blob, "mi-meme.png");
+    }).catch((error) => {
+        console.log (error)
+      });
+})
 
 // barra imagen
 $inputUrlImg.addEventListener("input", () => {
