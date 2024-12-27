@@ -12,6 +12,7 @@ const $buttonDownload = $("#downloadImg")
 const $imgMeme = $("#imgMeme"); //este es el div que contiene a la imagen 
 const $inputUrlImg = $("#imgUrl");
 const $inputImgBg = $("#imgBgcolor");
+const $selectMode = $("#selectMode");
 const $rangeBrightness = $("#imgBrightness");
 const $rangeOpacity = $("#imgOpacity");
 const $rangeContrast = $("#imgContrast");
@@ -21,6 +22,7 @@ const $rangeSepia = $("#imgSepia");
 const $rangeHue = $("#imgHueRotation");
 const $rangeSaturation = $("#imgSaturation");
 const $rangeNegative = $("#imgNegatives");
+const $buttonResetValues = $("#resetValues")
 // ----- BARRA DE CONFIG TEXTO --------
 const $buttonCloseTxt = $("#closeFormTxt");
 const $inputTextTop = $("#textTop");
@@ -102,6 +104,10 @@ $inputImgBg.addEventListener("input", () =>{
     $imgMeme.style.backgroundColor = `${$inputImgBg.value}` 
 })
 
+$selectMode.addEventListener("change", () =>{
+    $imgMeme.style.mixBlendMode = $selectMode.value;
+})
+
 
 $rangeBrightness.addEventListener("input", () => {
     $imgMeme.style.filter = `brightness(${$rangeBrightness.value})`
@@ -138,6 +144,20 @@ $rangeSaturation.addEventListener("input", () => {
 $rangeNegative.addEventListener("input", () => {
     $imgMeme.style.filter = `invert(${$rangeNegative.value})`;
 });
+
+$buttonResetValues.addEventListener("click", () => {
+    $inputUrlImg.value = "";
+    $imgMeme.style.backgroundImage = "";
+    $imgMeme.style.backgroundColor = "";
+    $imgMeme.style.mixBlendMode = "unset";
+    $selectMode.value = "";
+    $divCardTextTop.innerText = "";
+    $divCardTextTop.style.fontSize = "30px";
+    $divCardTextBottom.innerText = "";
+    $divCardTextBottom.style.fontSize = "30px";
+
+})
+
 
 // --------------------------------
 

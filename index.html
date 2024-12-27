@@ -59,12 +59,12 @@
                 <div>
                     <input type="color" id="imgBgcolor">
                     <select id="selectMode">
-                        <option>Normal</option>
-                        <option>Multiplicar</option>
-                        <option>Pantalla</option>
-                        <option>Superponer</option>
-                        <option>Oscurecer</option>
-                        <option>Aclarar</option>
+                        <option value="unset">Normal</option>
+                        <option value="lighten">Multiplicar</option>
+                        <option value="darken">Pantalla</option>
+                        <option value="difference">Superponer</option>
+                        <option value="luminosity">Oscurecer</option>
+                        <option value="multiply">Aclarar</option>
                     </select>
                 </div>
             </div>
@@ -105,7 +105,7 @@
                 <input type="range" id="imgNegatives" min="0" max="1" step="0.1">
             </div>
             <div class="form-items">
-                <button class="buttonConfig">Reestablecer Filtros</button>
+                <button id="resetValues" class="buttonConfig">Reestablecer Filtros</button>
             </div>
         </section>
     </aside>
