@@ -10,13 +10,40 @@ body{
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    background-color: #161b23;
     font-family: "Poppins", serif;
+}
+
+body.darkMode {
+    background-color: #161b23;
     color: #d6dde8;
 }
 
-header{
+body.darkMode header{
     background-color: #161b23;
+    color:#d6dde8;
+}
+
+body.darkMode aside {
+    background-color: #21242b;
+}
+
+body.lightMode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.lightMode header {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+body.lightMode aside {
+    background-color: #ffffff;
+}
+
+
+header{
+    
     text-align: center;
     padding: 20px;
     border-bottom: 2px solid #d62ed3;
@@ -25,7 +52,6 @@ header{
 
 header h1{
     margin: 10px;
-    color:#d6dde8;
     font-size: 50px;
 }
 
@@ -111,7 +137,6 @@ aside{
     position: fixed;
     width: 310px;
     height: 100vh;
-    background-color: #21242b;
     padding: 20px;
     top: 0;
     right: 0;

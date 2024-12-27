@@ -2,6 +2,8 @@ const $ = element => document.querySelector(element);
 
 const $buttonImage = $("#buttonImage");
 const $buttonText = $("#buttonText");
+const $buttonModeDark = $("#buttonModeDark");
+const $buttonModeLight = $("#buttonModeLight");
 const $asideImg = $("#taskbarImg");
 const $asideTxt = $("#taskbarTxt");
 // ----- BARRA DE CONFIG DE IMAGEN -------
@@ -39,19 +41,36 @@ const $divCardTextTop = $("#cardTextTop"); // este es el div que contiene al tex
 const $divCardTextBottom = $("#cardTextBottom"); // este es el div que contiene al texto inferior 
 
 
-// funcion para los botones "imagen" y "texto"
-const buttonsAside = (showAside, hideAside) => {
-    showAside.style.display = 'block';
-    hideAside.style.display = 'none';
+// funcion para los botones "imagen", "texto" y modo oscuro y claro
+const buttonsChange = (show, hide) => {
+    show.style.display = 'block';
+    hide.style.display = 'none';
 }
 
 // Eventos click de los botones 
 
 $buttonImage.addEventListener("click", () => {
-    buttonsAside($asideImg, $asideTxt);
+    buttonsChange($asideImg, $asideTxt);
 });
 $buttonText.addEventListener("click", () => {
-    buttonsAside($asideTxt, $asideImg);
+    buttonsChange($asideTxt, $asideImg);
+})
+
+// boton modo oscuro/claro
+
+$buttonModeDark.addEventListener("click", () => {
+    
+    document.body.classList.remove("lightMode");
+    document.body.classList.add("darkMode");
+
+    buttonsChange($buttonModeLight,$buttonModeDark)
+});
+
+$buttonModeLight.addEventListener("click", () =>{
+    document.body.classList.remove("darkMode");
+    document.body.classList.add("lightMode");
+
+    buttonsChange($buttonModeDark,$buttonModeLight);
 })
 
 // se muestra por defecto primero la barra de imagen y oculta la de texto
